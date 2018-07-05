@@ -10,8 +10,21 @@
 		8C7DC4AA20E93FA400F3AB41 /* Relict.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C7DC4A820E93FA400F3AB41 /* Relict.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C7DC4CC20E9421A00F3AB41 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7DC4CB20E9421A00F3AB41 /* Core.swift */; };
 		8C7DC4CF20E9426700F3AB41 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7DC4CE20E9426700F3AB41 /* SDL2.framework */; };
-		8C7DC4D120E9427400F3AB41 /* SDL2.framework in Resources */ = {isa = PBXBuildFile; fileRef = 8C7DC4CE20E9426700F3AB41 /* SDL2.framework */; };
+		8C7DC4EE20E9468C00F3AB41 /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C7DC4CE20E9426700F3AB41 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8C7DC4ED20E9467B00F3AB41 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8C7DC4EE20E9468C00F3AB41 /* SDL2.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8C7DC4A520E93FA400F3AB41 /* Relict.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Relict.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +105,7 @@
 				8C7DC4A120E93FA400F3AB41 /* Frameworks */,
 				8C7DC4A220E93FA400F3AB41 /* Headers */,
 				8C7DC4A320E93FA400F3AB41 /* Resources */,
+				8C7DC4ED20E9467B00F3AB41 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -140,7 +154,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C7DC4D120E9427400F3AB41 /* SDL2.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +286,7 @@
 		8C7DC4AE20E93FA400F3AB41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -290,6 +304,10 @@
 				INFOPLIST_FILE = Relict/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/Swift",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jowkame.Relict;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -302,6 +320,7 @@
 		8C7DC4AF20E93FA400F3AB41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -319,6 +338,10 @@
 				INFOPLIST_FILE = Relict/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/Swift",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jowkame.Relict;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
