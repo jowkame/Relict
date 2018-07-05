@@ -301,6 +301,7 @@
 					"$(PROJECT_DIR)/libs",
 				);
 				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libs/SDL2.framework\"";
 				INFOPLIST_FILE = Relict/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -335,6 +336,7 @@
 					"$(PROJECT_DIR)/libs",
 				);
 				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libs/SDL2.framework\"";
 				INFOPLIST_FILE = Relict/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
