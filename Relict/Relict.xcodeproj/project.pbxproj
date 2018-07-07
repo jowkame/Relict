@@ -7,13 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C466B0C20F10258000BB453 /* RLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C466B0B20F10258000BB453 /* RLError.swift */; };
 		8C7DC4AA20E93FA400F3AB41 /* Relict.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C7DC4A820E93FA400F3AB41 /* Relict.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C7DC4CC20E9421A00F3AB41 /* RLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7DC4CB20E9421A00F3AB41 /* RLApp.swift */; };
+		8C7DC4CF20E9426700F3AB41 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7DC4CE20E9426700F3AB41 /* SDL2.framework */; };
+		8C7DC4EE20E9468C00F3AB41 /* SDL2.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C7DC4CE20E9426700F3AB41 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CB10E6320EF68660096B873 /* RLWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB10E6220EF68660096B873 /* RLWindow.swift */; };
+		8CB10E6520EF68C40096B873 /* RLGraphicsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB10E6420EF68C40096B873 /* RLGraphicsManager.swift */; };
+		8CB10E6820EF69160096B873 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB10E6720EF69160096B873 /* Constants.swift */; };
+		8CB10E6C20EF6ADF0096B873 /* RLTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB10E6B20EF6ADF0096B873 /* RLTypes.swift */; };
+		8CB10E7620EF6E9E0096B873 /* RLSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB10E7520EF6E9E0096B873 /* RLSurface.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8C7DC4ED20E9467B00F3AB41 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8C7DC4EE20E9468C00F3AB41 /* SDL2.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8C466B0B20F10258000BB453 /* RLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLError.swift; sourceTree = "<group>"; };
 		8C7DC4A520E93FA400F3AB41 /* Relict.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Relict.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7DC4A820E93FA400F3AB41 /* Relict.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Relict.h; sourceTree = "<group>"; };
 		8C7DC4A920E93FA400F3AB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C7DC4CB20E9421A00F3AB41 /* RLApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLApp.swift; sourceTree = "<group>"; };
+		8C7DC4CE20E9426700F3AB41 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = libs/SDL2.framework; sourceTree = "<group>"; };
+		8C7DC4D220E942BE00F3AB41 /* module.map */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.map; sourceTree = SOURCE_ROOT; };
+		8CB10E6220EF68660096B873 /* RLWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLWindow.swift; sourceTree = "<group>"; };
+		8CB10E6420EF68C40096B873 /* RLGraphicsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLGraphicsManager.swift; sourceTree = "<group>"; };
+		8CB10E6720EF69160096B873 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8CB10E6B20EF6ADF0096B873 /* RLTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLTypes.swift; sourceTree = "<group>"; };
+		8CB10E7520EF6E9E0096B873 /* RLSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLSurface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +52,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C7DC4CF20E9426700F3AB41 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C466B0820F0FE78000BB453 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				8C466B0B20F10258000BB453 /* RLError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		8C7DC49B20E93FA400F3AB41 = {
 			isa = PBXGroup;
 			children = (
 				8C7DC4A720E93FA400F3AB41 /* Relict */,
 				8C7DC4A620E93FA400F3AB41 /* Products */,
+				8C7DC4CD20E9426700F3AB41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,10 +87,58 @@
 		8C7DC4A720E93FA400F3AB41 /* Relict */ = {
 			isa = PBXGroup;
 			children = (
+				8CB10E6020EF68300096B873 /* Core */,
+				8C7DC4D220E942BE00F3AB41 /* module.map */,
 				8C7DC4A820E93FA400F3AB41 /* Relict.h */,
 				8C7DC4A920E93FA400F3AB41 /* Info.plist */,
+				8C7DC4CB20E9421A00F3AB41 /* RLApp.swift */,
 			);
 			path = Relict;
+			sourceTree = "<group>";
+		};
+		8C7DC4CD20E9426700F3AB41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C7DC4CE20E9426700F3AB41 /* SDL2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CB10E6020EF68300096B873 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8CB10E6620EF690B0096B873 /* Constants */,
+				8C466B0820F0FE78000BB453 /* Error */,
+				8CB10E6120EF683B0096B873 /* Graphics */,
+				8CB10E6A20EF6ACF0096B873 /* Types */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8CB10E6120EF683B0096B873 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				8CB10E6220EF68660096B873 /* RLWindow.swift */,
+				8CB10E6420EF68C40096B873 /* RLGraphicsManager.swift */,
+				8CB10E7520EF6E9E0096B873 /* RLSurface.swift */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		8CB10E6620EF690B0096B873 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8CB10E6720EF69160096B873 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8CB10E6A20EF6ACF0096B873 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				8CB10E6B20EF6ADF0096B873 /* RLTypes.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +163,7 @@
 				8C7DC4A120E93FA400F3AB41 /* Frameworks */,
 				8C7DC4A220E93FA400F3AB41 /* Headers */,
 				8C7DC4A320E93FA400F3AB41 /* Resources */,
+				8C7DC4ED20E9467B00F3AB41 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -95,6 +185,7 @@
 				TargetAttributes = {
 					8C7DC4A420E93FA400F3AB41 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +222,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C466B0C20F10258000BB453 /* RLError.swift in Sources */,
+				8CB10E6C20EF6ADF0096B873 /* RLTypes.swift in Sources */,
+				8CB10E6520EF68C40096B873 /* RLGraphicsManager.swift in Sources */,
+				8C7DC4CC20E9421A00F3AB41 /* RLApp.swift in Sources */,
+				8CB10E6320EF68660096B873 /* RLWindow.swift in Sources */,
+				8CB10E6820EF69160096B873 /* Constants.swift in Sources */,
+				8CB10E7620EF6E9E0096B873 /* RLSurface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +350,9 @@
 		8C7DC4AE20E93FA400F3AB41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -259,13 +360,25 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
 				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libs/SDL2.framework\"";
 				INFOPLIST_FILE = Relict/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/Swift",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jowkame.Relict;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)\"";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -273,6 +386,9 @@
 		8C7DC4AF20E93FA400F3AB41 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -280,13 +396,24 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
 				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libs/SDL2.framework\"";
 				INFOPLIST_FILE = Relict/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/Swift",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jowkame.Relict;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)\"";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

@@ -1,0 +1,4 @@
+module SDL2 [system] {
+    header "libs/SDL2.framework/headers/SDL.h"
+    export *
+}
