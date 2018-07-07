@@ -10,10 +10,14 @@ import Foundation
 
 public class RLApp {
     private var graphicsManager: RLGraphicsManager! = nil
+    private var configManager: RLConfigManager! = nil
     
     public init() {}
     
     public func run() {
+        configManager = RLConfigManager()
+        configManager.processConfigFile()
+        
         graphicsManager = RLGraphicsManager()
         let graphicsResult = graphicsManager.initVideo()
         

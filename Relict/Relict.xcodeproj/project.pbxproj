@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8C466B0C20F10258000BB453 /* RLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C466B0B20F10258000BB453 /* RLError.swift */; };
+		8C466B1620F130FF000BB453 /* RLConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C466B1520F130FF000BB453 /* RLConfigManager.swift */; };
+		8C466B1820F1321D000BB453 /* RLXMLConfigParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C466B1720F1321D000BB453 /* RLXMLConfigParser.swift */; };
 		8C7DC4AA20E93FA400F3AB41 /* Relict.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C7DC4A820E93FA400F3AB41 /* Relict.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C7DC4CC20E9421A00F3AB41 /* RLApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7DC4CB20E9421A00F3AB41 /* RLApp.swift */; };
 		8C7DC4CF20E9426700F3AB41 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C7DC4CE20E9426700F3AB41 /* SDL2.framework */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		8C466B0B20F10258000BB453 /* RLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLError.swift; sourceTree = "<group>"; };
+		8C466B1520F130FF000BB453 /* RLConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLConfigManager.swift; sourceTree = "<group>"; };
+		8C466B1720F1321D000BB453 /* RLXMLConfigParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLXMLConfigParser.swift; sourceTree = "<group>"; };
 		8C7DC4A520E93FA400F3AB41 /* Relict.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Relict.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7DC4A820E93FA400F3AB41 /* Relict.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Relict.h; sourceTree = "<group>"; };
 		8C7DC4A920E93FA400F3AB41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +69,15 @@
 				8C466B0B20F10258000BB453 /* RLError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		8C466B1420F130E1000BB453 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				8C466B1520F130FF000BB453 /* RLConfigManager.swift */,
+				8C466B1720F1321D000BB453 /* RLXMLConfigParser.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		8C7DC49B20E93FA400F3AB41 = {
@@ -107,6 +120,7 @@
 		8CB10E6020EF68300096B873 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8C466B1420F130E1000BB453 /* Config */,
 				8CB10E6620EF690B0096B873 /* Constants */,
 				8C466B0820F0FE78000BB453 /* Error */,
 				8CB10E6120EF683B0096B873 /* Graphics */,
@@ -228,7 +242,9 @@
 				8C7DC4CC20E9421A00F3AB41 /* RLApp.swift in Sources */,
 				8CB10E6320EF68660096B873 /* RLWindow.swift in Sources */,
 				8CB10E6820EF69160096B873 /* Constants.swift in Sources */,
+				8C466B1820F1321D000BB453 /* RLXMLConfigParser.swift in Sources */,
 				8CB10E7620EF6E9E0096B873 /* RLSurface.swift in Sources */,
+				8C466B1620F130FF000BB453 /* RLConfigManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
