@@ -28,5 +28,6 @@ class RLGraphicsManager {
     func createWindow() {
         let config = RLWindowConfig(x: 0, y: 0, isCentered: true, width: 800, height: 600, title: "Demo Relict App")
         window = RLWindow(config: config)
+        window.show()
     }
 }

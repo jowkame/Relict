@@ -19,6 +19,7 @@ struct RLWindowConfig {
 
 class RLWindow {
     private var config: RLWindowConfig! = nil
+    private var isRunning: Bool = true
     
     public var sdlWindowPointer: OpaquePointer?
 
@@ -32,19 +33,24 @@ class RLWindow {
         
         sdlWindowPointer = SDL_CreateWindow(config.title, x, y, Int32(config.width), Int32(config.height), SDL_WINDOW_SHOWN.rawValue)
         
-        while (true) {
-            let event: UnsafeMutablePointer<SDL_Event>! = nil
+        
+        while (isRunning) {
+            let event = UnsafeMutablePointer<SDL_Event>.allocate(capacity: 1)
             
-            while (SDL_PollEvent(event) != 0) {
-                /* handle your event here */
+            event.withMemoryRebound(to: SDL_Event.self, capacity: 1) {
+                if SDL_PollEvent($0) != 0 {
+                    if event.pointee.type == SDL_KEYDOWN.rawValue {
+                        if event.pointee.key.keysym.sym == SDLK_ESCAPE {
+                            isRunning = false
+                        }
+                    }
+                } else {
+                    isRunning = false
+                }
             }
-            /* do some other stuff here -- draw your app, etc. */
         }
         
-        // Close and destroy the window
         SDL_DestroyWindow(sdlWindowPointer)
-        
-        // Clean up
         SDL_Quit()
     }
 }
