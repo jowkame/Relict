@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 #import <SDL2/SDL.h>
+#import <XMLC/XMLC.h>
 
 //! Project version number for Relict.
 FOUNDATION_EXPORT double RelictVersionNumber;

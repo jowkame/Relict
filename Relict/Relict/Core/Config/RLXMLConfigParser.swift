@@ -12,27 +12,16 @@ class RLXMLConfigParser {
     func parseXml(path: String) -> RLWindowConfig {
         var config = RLWindowConfig()
         
-        do {
-            let xmlDoc = try XMLDocument(contentsOf: URL(fileURLWithPath: path), options: XMLNode.Options(rawValue: 0))
-            let rootXmlDoc = xmlDoc.rootElement()!
-            
-//            for child in rootXmlDoc.children! {
-//                if child.name! == Constants.Config.ElementsKey.windowWidth {
-//                    config.width = Int(child.objectValue as! String)!
-//                } else if child.name! == Constants.Config.ElementsKey.windowHeight {
-//                    config.height = Int(child.objectValue as! String)!
-//                } else if child.name! == Constants.Config.ElementsKey.windowX {
-//                    config.x = Int(child.objectValue as! String)!
-//                } else if child.name! == Constants.Config.ElementsKey.windowY {
-//                    config.y = Int(child.objectValue as! String)!
-//                } else if child.name! == Constants.Config.ElementsKey.isCentered {
-//                    config.isCentered = (child.objectValue as! String == "true")
-//                }
-//            }
-        } catch {
-            
-        }
+        let data = NSData(contentsOfFile: path)!
 
+
+        let file = UnsafeMutablePointer<FILE>.allocate(capacity: 1)
+
+
+
+        let pointer = data.bytes.bindMemory(to: FILE.self, capacity: 1)
+        let a = xml_open_document(pointer)
+        
         return config
     }
     

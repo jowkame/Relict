@@ -19,6 +19,8 @@
 		8CB10E6820EF69160096B873 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB10E6720EF69160096B873 /* Constants.swift */; };
 		8CB10E6C20EF6ADF0096B873 /* RLTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB10E6B20EF6ADF0096B873 /* RLTypes.swift */; };
 		8CB10E7620EF6E9E0096B873 /* RLSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB10E7520EF6E9E0096B873 /* RLSurface.swift */; };
+		8CCABD4720F29F99005D366F /* XMLC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCABD4620F29F99005D366F /* XMLC.framework */; };
+		8CCABD4820F2A07F005D366F /* XMLC.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8CCABD4620F29F99005D366F /* XMLC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +31,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				8C7DC4EE20E9468C00F3AB41 /* SDL2.framework in CopyFiles */,
+				8CCABD4820F2A07F005D366F /* XMLC.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +52,7 @@
 		8CB10E6720EF69160096B873 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8CB10E6B20EF6ADF0096B873 /* RLTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLTypes.swift; sourceTree = "<group>"; };
 		8CB10E7520EF6E9E0096B873 /* RLSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLSurface.swift; sourceTree = "<group>"; };
+		8CCABD4620F29F99005D366F /* XMLC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XMLC.framework; path = libs/XMLC.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCABD4720F29F99005D366F /* XMLC.framework in Frameworks */,
 				8C7DC4CF20E9426700F3AB41 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +117,7 @@
 		8C7DC4CD20E9426700F3AB41 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CCABD4620F29F99005D366F /* XMLC.framework */,
 				8C7DC4CE20E9426700F3AB41 /* SDL2.framework */,
 			);
 			name = Frameworks;
@@ -381,7 +387,10 @@
 					"$(PROJECT_DIR)/libs",
 				);
 				FRAMEWORK_VERSION = A;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libs/SDL2.framework\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/libs/SDL2.framework\"",
+					"\"$(SRCROOT)/libs/XMLC.framework\"",
+				);
 				INFOPLIST_FILE = Relict/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -389,6 +398,7 @@
 					"$(inherited)",
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/Swift",
 				);
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jowkame.Relict;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -396,6 +406,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -417,7 +428,10 @@
 					"$(PROJECT_DIR)/libs",
 				);
 				FRAMEWORK_VERSION = A;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libs/SDL2.framework\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/libs/SDL2.framework\"",
+					"\"$(SRCROOT)/libs/XMLC.framework\"",
+				);
 				INFOPLIST_FILE = Relict/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -425,12 +439,14 @@
 					"$(inherited)",
 					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks/Swift",
 				);
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jowkame.Relict;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)\"";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
